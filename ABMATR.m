@@ -22,7 +22,7 @@ end
 % Compute the right hand side vector and store it in UNB
 for i = 1:N
     UNB(i) = 0;
-    for j = i:N
+    for j = 1:N
         if INDEX(j) == 0
             UNB(i) = UNB(i) - H(i, j)*UB(j);
         elseif INDEX(j) ~= 0
