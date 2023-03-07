@@ -1,8 +1,8 @@
 
 
 function OUTPUT(XM, YM, UB, UNB, XIN, YIN, UIN, N, IN)
-    boundary_val = [XM' YM' UB' UNB ];
-    internal_val = [XIN' YIN' UIN'];
+    boundary_val = [XM' YM' UB' UNB ]';
+    internal_val = [XIN' YIN' UIN']';
     fid = fopen('output.txt', 'w');
     fprintf(fid,string(N)+ ' elements were used with ' + string(IN) + ' internal points.\n');
     % write baoundary values to file

@@ -1,12 +1,12 @@
-% DOUBLE CHECK
-function X = SOLVEQ(A,UNB,N)
+
+function SOLVEQ(A,UNB,N)
     % initialize output variables
-    X = zeros(N,1);
+    
     LSING = 0;
     
     % solve the system of equations
     X = A \ UNB;
-    
+    UNB = X;
     % check if the system is singular
     if rank(A) < N
         LSING = 1;

@@ -13,3 +13,5 @@ function RESULT = DALPHA(X0,Y0,X1,Y1,X2,Y2)
     DA = atan2(DY2R,DX2R);
     RESULT = DA/(2*pi);
 end
+
+
