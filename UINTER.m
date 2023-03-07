@@ -8,9 +8,9 @@ YL(N+1) = YL(1);
         UIN(k) = 0;
         for j = 1:N 
             JP1 = j+1;
-            RESH = DALPHA(XIN(k),YIN(k),XL(j),YL(j),XL(JP1),YL(JP1))
-            RESG = RLINTC(XIN(k),YIN(k),XL(j),YL(j),XL(JP1),YL(JP1))
-            UIN(K) = UIN(K) + RESH*UB(j) - RESG*UNB(j);
+            RESH = DALPHA(XIN(k),YIN(k),XL(j),YL(j),XL(JP1),YL(JP1));
+            RESG = RLINTC(XIN(k),YIN(k),XL(j),YL(j),XL(JP1),YL(JP1));
+            UIN(k) = UIN(k) + RESH*UB(j) - RESG*UNB(j);
         end
     end
 end

@@ -1,7 +1,7 @@
 % Compute the elements of the G matrix
-function G =  GMATR(XL, YL, N)
+function [G, XM, YM] =  GMATR(XL, YL, N)
     G = zeros(N);
-    XM = zeros(N);
+    XM = zeros(1,N);
     YM = XM;
     % Compute Nodal Coordinates
     XL(N+1) = XL(1);
