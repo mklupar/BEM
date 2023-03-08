@@ -1,16 +1,16 @@
 
-function SOLVEQ(A,UNB,N)
+function X = SOLVEQ(A,UNB,N)
     % initialize output variables
-    
-    LSING = 0;
-    
-    % solve the system of equations
-    X = A \ UNB;
-    UNB = X;
     % check if the system is singular
+
+    LSING = 0;
     if rank(A) < N
         LSING = 1;
     end
+
+    % solve the system of equations
+    X = A \ UNB;
+  
     
     % print result to console
     if LSING == 0

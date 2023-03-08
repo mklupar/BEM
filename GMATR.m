@@ -1,8 +1,6 @@
 % Compute the elements of the G matrix
 function [G, XM, YM] =  GMATR(XL, YL, N)
-    G = zeros(N);
-    XM = zeros(1,N);
-    YM = XM;
+    
     % Compute Nodal Coordinates
     XL(N+1) = XL(1);
     YL(N+1) = YL(1);
@@ -17,7 +15,7 @@ function [G, XM, YM] =  GMATR(XL, YL, N)
         for j = 1:N
             JP1 = j+1;
             if i ~= j
-                G(i,j) = RLINTC(XM(i),YM(i),XL(j),YL(i),XL(JP1),YL(JP1));
+                G(i,j) = RLINTC(XM(i),YM(i),XL(j),YL(j),XL(JP1),YL(JP1));
             elseif i == j
                 G(i,j) = SLINTC(XL(j),YL(j),XL(JP1),YL(JP1));
             end

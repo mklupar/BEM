@@ -16,7 +16,7 @@ function H = HMATR(XL, YL,N)
             if i~=j
                 H(i,j) = DALPHA(XM(i),YM(i),XL(j),YL(j),XL(j+1),YL(j+1));
             elseif i == j
-                H(i,j) = -0.5;
+                H(i,j) = -0.5;  
             end
         end
     end

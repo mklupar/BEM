@@ -14,9 +14,9 @@ function RESULT = RLINTC(X0,Y0,X1,Y1,X2,Y2)
     RESULT = 0;
     
     for i = 1:4
-        XC(i) = AX*XI(i) + BX;
-        YC(i) = AY*XI(i) + BY;
-        RA = sqrt((XC(i) - X0)^2 + (YC(i) - Y0)^2);
+        XC = AX*XI(i) + BX;
+        YC = AY*XI(i) + BY;
+        RA = sqrt((XC - X0)^2 + (YC - Y0)^2);
         RESULT = RESULT + log(RA) * WG(i);
     end
     SL = 2 * sqrt(AX^2 + AY^2);
